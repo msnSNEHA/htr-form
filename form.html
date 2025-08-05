@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTR Request Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .btn-group {
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+    .reset-btn {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Hardware Testing Report Number Request Form</h2>
+  <p><strong>Note:</strong> Please email HTR report, as soon as available, to "<code>htr-help</code>" aliases to post it on HTR web page. Thanks!</p>
+
+  <form method="POST" action="https://your-backend-url.onrender.com/submit">
+    <label>Title of Your DVT Report</label>
+    <input type="text" name="title" required>
+
+    <label>Component Part # & Agile Description</label>
+    <input type="text" name="component">
+
+    <label>Supplier's Name & Supplier P/N</label>
+    <input type="text" name="supplier">
+
+    <label>Tested (710/711/511/5i’s) & Agile Description</label>
+    <input type="text" name="tested1">
+
+    <label>Tested (750s/8) & Agile Description</label>
+    <input type="text" name="tested2">
+
+    <label>Tested Model / SKU & Agile Description</label>
+    <input type="text" name="model">
+
+    <label>Affected PRs or RLI for NPI Project</label>
+    <input type="text" name="pr_rli">
+
+    <label>Affected Deviations, DEVECO/MCO</label>
+    <input type="text" name="deviations">
+
+    <label>Original Plan/Report CVS Directory Location</label>
+    <input type="text" name="directory">
+
+    <label>Requestor's Name</label>
+    <input type="text" name="requestor_name" required>
+
+    <label>Requestor's Email</label>
+    <input type="email" name="requestor_email" required>
+
+    <label>HTR Report Available Date (Tentative)</label>
+    <input type="date" name="htr_date" required>
+
+    <div class="btn-group">
+      <button type="submit" class="submit-btn">Submit</button>
+      <button type="reset" class="reset-btn">Reset</button>
+    </div>
+  </form>
+
+</body>
+</html>
